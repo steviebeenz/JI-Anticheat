@@ -1,0 +1,6 @@
+name: JI
+version: ${project.version}
+main: cc.ghast.janitor.JI
+authors: [Ghast]
+description: Powerful Minecraft anticheat
+website: https://artemis.ac
