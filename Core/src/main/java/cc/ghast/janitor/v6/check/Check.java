@@ -31,7 +31,7 @@ public abstract class Check {
     }
 
     protected void log(String debug) {
-        violate(1, "");
+        violate(1, debug);
     }
 
     protected void log(int i, String debug) {
