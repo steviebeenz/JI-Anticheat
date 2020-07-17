@@ -1,14 +1,18 @@
-package cc.ghast.janitor.v6.utils;
+package cc.ghast.janitor.v6.utils.bounding;
 
+import cc.ghast.janitor.v6.utils.math.MathUtil;
+import cc.ghast.janitor.v6.utils.nms.EnumFacing;
+import cc.ghast.janitor.v6.utils.point.MovingPoint;
+import cc.ghast.janitor.v6.utils.point.Point;
+import com.cryptomorin.xseries.particles.ParticleDisplay;
+import com.cryptomorin.xseries.particles.XParticle;
 import lombok.Getter;
-import org.bukkit.Effect;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.World;
+import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
@@ -493,21 +497,13 @@ public class BoundingBox {
         }
     }
 
-    public void draw(Effect particle, List<? extends Player> players) {
-        List<Float> xVars = MathUtil.skipValues(0.3, minX, maxX);
-        List<Float> yVars = MathUtil.skipValues(0.3, minY, maxY);
-        List<Float> zVars = MathUtil.skipValues(0.3, minZ, maxZ);
-
-        for (float x : xVars){
-            for (float y : yVars) {
-                for (float z : zVars){
-                    /*PacketServerWorldParticle packet = new PacketServerWorldParticle(particle, true, x, y, z, 0F, 0F, 0F, 0, 1);
-                    */
-                    players.forEach(p -> {
-                        p.spigot().playEffect(new Location(p.getWorld(), x, y, z), particle, 0, 0,0F,0F,0F,0.0F,1, 0);
-                    });
-                }
-            }
-        }
+    public void draw(Color particle, Player player) {
+        XParticle.structuredCube(
+                new Location(player.getWorld(), minX, minY, minZ),
+                new Location(player.getWorld(), maxX, maxY, maxZ),
+                0.3,
+                ParticleDisplay.colored(new Location(player.getWorld(),
+                        middleX(), minY, middleZ()), particle, 1)
+        );
     }
 }

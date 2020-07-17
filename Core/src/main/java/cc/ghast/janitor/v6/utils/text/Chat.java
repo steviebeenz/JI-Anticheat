@@ -1,4 +1,4 @@
-package cc.ghast.janitor.v6.utils;
+package cc.ghast.janitor.v6.utils.text;
 
 
 import org.bukkit.Bukkit;

@@ -1,7 +1,7 @@
-package cc.ghast.artemis.v4.utils.raytrace;
+package cc.ghast.janitor.v6.utils.point;
 
-import cc.ghast.artemis.v3.packet.wrapper.tinyprotocol.packet.types.MathHelper;
-import cc.ghast.artemis.v4.utils.position.SimplePosition;
+import cc.ghast.janitor.v6.utils.nms.MathHelper;
+import cc.ghast.janitor.v6.utils.position.SimplePosition;
 import lombok.Getter;
 import org.bukkit.util.Vector;
 
@@ -54,7 +54,7 @@ public class Point {
      */
     public Point normalize()
     {
-        double d0 = (double)MathHelper.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);
+        double d0 = (double) MathHelper.sqrt_double(this.x * this.x + this.y * this.y + this.z * this.z);
         return d0 < 1.0E-4D ? new Point(0.0D, 0.0D, 0.0D) : new Point(this.x / d0, this.y / d0, this.z / d0);
     }
 
@@ -103,7 +103,7 @@ public class Point {
         double d0 = vec.x - this.x;
         double d1 = vec.y - this.y;
         double d2 = vec.z - this.z;
-        return (double)MathHelper.sqrt(d0 * d0 + d1 * d1 + d2 * d2);
+        return (double)MathHelper.sqrt_double(d0 * d0 + d1 * d1 + d2 * d2);
     }
 
     /**
@@ -122,7 +122,7 @@ public class Point {
      */
     public double lengthVector()
     {
-        return (double) MathHelper.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);
+        return (double) MathHelper.sqrt_double(this.x * this.x + this.y * this.y + this.z * this.z);
     }
 
     /**

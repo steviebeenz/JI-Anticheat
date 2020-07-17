@@ -1,9 +1,8 @@
-package cc.ghast.artemis.v4.utils.raytrace;
+package cc.ghast.janitor.v6.utils.point;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.math3.util.FastMath;
-import org.bukkit.util.Vector;
 
 /**
  * @author Ghast
@@ -41,7 +40,7 @@ public class Point2D {
      */
     public float bukkitAngle(Point2D other) {
         double dot = this.dot(other) / (this.length() * other.length());
-        return (float)Math.acos(dot);
+        return (float) Math.acos(dot);
     }
 
     public float axisAngle(Point2D other) {

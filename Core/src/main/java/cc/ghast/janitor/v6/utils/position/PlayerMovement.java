@@ -1,6 +1,6 @@
-package cc.ghast.artemis.v4.utils.position;
+package cc.ghast.janitor.v6.utils.position;
 
-import cc.ghast.artemis.v4.utils.maths.MathUtil;
+import cc.ghast.janitor.v6.utils.math.MathUtil;
 import lombok.Getter;
 import org.bukkit.Location;
 import org.bukkit.World;

@@ -1,4 +1,4 @@
-package cc.ghast.artemis.v4.utils.position;
+package cc.ghast.janitor.v6.utils.position;
 
 /**
  * @author Ghast

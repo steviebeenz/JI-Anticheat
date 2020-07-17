@@ -1,9 +1,8 @@
-package cc.ghast.artemis.v4.utils.maths;
+package cc.ghast.janitor.v6.utils.math;
 
-import cc.ghast.artemis.v4.utils.lists.Tuple;
-import cc.ghast.artemis.v4.utils.position.PlayerMovement;
-import cc.ghast.artemis.v4.utils.position.PlayerPosition;
-import cc.ghast.artemis.v4.utils.position.SimpleRotation;
+import cc.ghast.janitor.v6.utils.position.PlayerMovement;
+import cc.ghast.janitor.v6.utils.position.PlayerPosition;
+import cc.ghast.janitor.v6.utils.position.SimpleRotation;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -42,32 +41,6 @@ public class MathUtil {
         float pitchWrapped = wrapAngleTo180(pitchChange);
 
         return pitchWrapped < 0.01;
-    }
-
-    public static Tuple<List<Double>, List<Double>> getOutliers(final Collection<? extends Number> collection) {
-        final List<Double> values = new ArrayList<>();
-
-        for (final Number number : collection) {
-            values.add(number.doubleValue());
-        }
-
-        final double q1 = getMedian(values.subList(0, values.size() / 2));
-        final double q3 = getMedian(values.subList(values.size() / 2, values.size()));
-
-        final double iqr = Math.abs(q1 - q3);
-        final double lowThreshold = q1 - 1.5 * iqr, highThreshold = q3 + 1.5 * iqr;
-
-        final Tuple<List<Double>, List<Double>> tuple = new Tuple<>(new ArrayList<>(), new ArrayList<>());
-
-        for (final Double value : values) {
-            if (value < lowThreshold) {
-                tuple.a().add(value);
-            } else if (value > highThreshold) {
-                tuple.b().add(value);
-            }
-        }
-
-        return tuple;
     }
 
     private static double getMedian(final List<Double> data) {

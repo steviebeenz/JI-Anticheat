@@ -1,4 +1,4 @@
-package cc.ghast.janitor.v6.utils;
+package cc.ghast.janitor.v6.utils.text;
 
 import cc.ghast.artemis.v4.check.data.ClickType;
 

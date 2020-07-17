@@ -1,4 +1,4 @@
-package cc.ghast.artemis.v4.utils.raytrace;
+package cc.ghast.janitor.v6.utils.point;
 
 /**
  * @author Ghast

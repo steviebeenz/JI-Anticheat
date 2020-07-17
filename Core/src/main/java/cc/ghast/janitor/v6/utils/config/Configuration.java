@@ -1,5 +1,6 @@
-package cc.ghast.janitor.v6.utils;
+package cc.ghast.janitor.v6.utils.config;
 
+import cc.ghast.janitor.v6.utils.text.Chat;
 import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
