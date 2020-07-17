@@ -13,10 +13,10 @@ import java.lang.annotation.Target;
 public @interface CheckData {
     CheckInformation.Type type();
     String var();
-    int maxVls();
-    boolean bannable();
-    boolean enabled();
-    ProtocolVersion[] incompatibleServer();
-    ProtocolVersion[] incompatibleClient();
-    CheckInformation.Stage stage();
+    int maxVls() default 15;
+    boolean bannable() default true;
+    boolean enabled() default true;
+    ProtocolVersion[] incompatibleServer() default {};
+    ProtocolVersion[] incompatibleClient() default  {};
+    CheckInformation.Stage stage() default CheckInformation.Stage.RELEASE;
 }

@@ -16,7 +16,7 @@ import org.bukkit.Bukkit;
 @RequiredArgsConstructor
 public abstract class Check {
     private final CheckInformation info;
-    private final PlayerData data;
+    public final PlayerData data;
 
     private int vls;
 

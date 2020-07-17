@@ -1,4 +1,4 @@
-package cc.ghast.artemis.v4.utils.lists;
+package cc.ghast.janitor.v6.utils.lists;
 
 public class Tuple<A, B> {
     private A a;

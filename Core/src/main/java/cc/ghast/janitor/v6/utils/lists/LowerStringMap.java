@@ -1,10 +1,10 @@
-package cc.ghast.artemis.v4.utils.lists;
+package cc.ghast.janitor.v6.utils.lists;
 
 import com.google.common.collect.Maps;
+
 import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
-import java.util.Map.Entry;
 
 public class LowerStringMap<V> implements Map<String, V>
 {
@@ -45,9 +45,9 @@ public class LowerStringMap<V> implements Map<String, V>
         return this.internalMap.remove(p_remove_1_.toString().toLowerCase());
     }
 
-    public void putAll(Map <? extends String, ? extends V > p_putAll_1_)
+    public void putAll(Map<? extends String, ? extends V > p_putAll_1_)
     {
-        for (Entry <? extends String, ? extends V > entry : p_putAll_1_.entrySet())
+        for (Entry<? extends String, ? extends V > entry : p_putAll_1_.entrySet())
         {
             this.put((String)entry.getKey(), entry.getValue());
         }

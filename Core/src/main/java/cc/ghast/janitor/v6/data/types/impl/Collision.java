@@ -22,4 +22,6 @@ public class Collision extends AbstractType {
     public boolean collidesWater;
 
     public boolean collidesLava;
+
+    public boolean collidesBelowBlock;
 }

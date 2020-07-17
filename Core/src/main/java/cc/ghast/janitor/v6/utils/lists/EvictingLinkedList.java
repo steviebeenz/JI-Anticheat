@@ -1,4 +1,4 @@
-package cc.ghast.artemis.v4.utils.lists;
+package cc.ghast.janitor.v6.utils.lists;
 
 import java.util.Collection;
 import java.util.LinkedList;
