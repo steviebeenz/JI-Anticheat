@@ -1,6 +1,6 @@
 package cc.ghast.janitor.v6.data;
 
-import cc.ghast.janitor.v6.data.types.*;
+import cc.ghast.janitor.v6.data.types.impl.*;
 
 /**
  * @author Ghast

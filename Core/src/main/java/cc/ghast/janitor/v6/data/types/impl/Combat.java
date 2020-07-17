@@ -1,6 +1,7 @@
-package cc.ghast.janitor.v6.data.types;
+package cc.ghast.janitor.v6.data.types.impl;
 
 import cc.ghast.janitor.v6.data.PlayerData;
+import cc.ghast.janitor.v6.data.types.AbstractType;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
