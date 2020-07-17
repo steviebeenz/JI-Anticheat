@@ -1,9 +1,11 @@
 package cc.ghast.janitor.v6.check;
 
+import cc.ghast.janitor.api.JanitorViolationEvent;
 import cc.ghast.janitor.v6.data.PlayerData;
 import com.comphenix.packetwrapper.AbstractPacket;
 import com.comphenix.protocol.events.PacketContainer;
 import lombok.RequiredArgsConstructor;
+import org.bukkit.Bukkit;
 
 /**
  * @author Ghast
@@ -37,6 +39,15 @@ public abstract class Check {
     }
 
     private void violate(int i, String debug) {
+        JanitorViolationEvent event = new JanitorViolationEvent(false, i, data.getPlayer(), info);
+        Bukkit.getPluginManager().callEvent(event);
 
+        if (event.isCancelled()) {
+            return;
+        }
+
+        vls += i;
+
+        // Todo alert things
     }
 }
