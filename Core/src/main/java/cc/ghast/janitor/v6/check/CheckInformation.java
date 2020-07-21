@@ -18,6 +18,7 @@ public class CheckInformation {
     private final Type type;
     private final String var;
     private final int maxVls;
+    private final long alertDelay;
     private final boolean bannable;
     private final boolean enabled;
     private final ProtocolVersion[] incompatibleServer;
@@ -28,6 +29,7 @@ public class CheckInformation {
         private Type type = Type.UNKNOWN;
         private String var = "X";
         private int maxVls = 15;
+        private long alertDelay = 0;
         private boolean bannable = false;
         private boolean enabled = true;
         private ProtocolVersion[] incompatibleServer = {ProtocolVersion.getGameVersion()};
@@ -46,6 +48,11 @@ public class CheckInformation {
 
         public Builder setMaxVls(int i){
             this.maxVls = i;
+            return this;
+        }
+
+        public Builder setAlertDelay(long i) {
+            this.alertDelay = i;
             return this;
         }
 
@@ -75,7 +82,7 @@ public class CheckInformation {
         }
 
         public CheckInformation build() {
-            return new CheckInformation(type, var, maxVls, bannable, enabled, incompatibleServer, incompatibleClient, stage);
+            return new CheckInformation(type, var, maxVls, alertDelay, bannable, enabled, incompatibleServer, incompatibleClient, stage);
         }
     }
 

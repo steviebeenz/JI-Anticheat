@@ -19,6 +19,7 @@ public abstract class Check {
     public final PlayerData data;
 
     private int vls;
+    private long lastAlert;
 
     public abstract void handle(AbstractPacket packet);
 
@@ -46,7 +47,7 @@ public abstract class Check {
             return;
         }
 
-        vls += i;
+        this.vls += i;
 
         // Todo alert things
     }
