@@ -1,3 +1,5 @@
+# I forked this as I new Terminalsin would make this private again. Why would he keep his code public? Here is an archive of it. 
+
 # JI Anticheat
  New generation of anticheating
 
