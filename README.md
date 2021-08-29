@@ -1,4 +1,4 @@
-# I forked this as I knew Terminalsin would make this private again. Why would he keep his code public? Here is an archive of it. 
+# I forked this as I knew Terminalsin would make this private again. This is not a crack, leak or similar, its just a fork of what Ghast (JI Janitor Author) had public on his github.
 
 # JI Anticheat
  New generation of anticheating
